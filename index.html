@@ -1,55 +1,1078 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <meta content="maximum-dpr=2" name="flexible" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
   <title>挺傲椒</title>
   <link rel="stylesheet" href="./assets/fontawesome.min.css">
   <link rel="stylesheet" href="./assets/bootstrap.min.css">
+  <script src="./assets/f.min.js"></script>
+  <!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"
+></script> -->
   <script src="./assets/jquery.min.js"></script>
   <script src="./assets/bootstrap.min.js"></script>
   <script src="./assets/lazyload.min.js"></script>
   <script>
-    window.onload = function() {
-      $("img.lazyload").lazyload({
-    effect : "fadeIn"
-});
+    window.onload = function () {
+      $("img.lazyload").lazyload();
     }
-    </script>
-    <style>
-      img {
-        max-width: 100%;
-    height: auto;
+  </script>
+  <style>
+    /* body {
+      display: flex;
+    flex-direction: column; */
+    /* } */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* font-size: 0; */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      /* display: block; */
+      line-height: 0;
+      vertical-align: top;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 19px;
+      background: #ffce2f;
+      height: 5.5rem;
+    }
+
+    header .home {
+      width: 1.9375rem;
+      height: 1.9375rem;
+    }
+
+    header .logo {
+      width: 11rem;
+      height: 3.625rem;
+    }
+
+    header .message {
+      width: 1.9375rem;
+      height: 1.9375rem;
+    }
+
+    .project-advantage,
+    .project-text-lever {
+      text-align: center;
+      margin: 3.75rem 0 2.06rem 0;
+    }
+
+    .project-advantage img,
+    .project-text-lever img,
+    .project-text-reviews img {
+      width: 39rem;
+      height: 5.5rem;
+    }
+
+    .advantage-list {
+      margin: 0 2.44rem;
+    }
+
+    .advantage-list .advantage {
+      height: 22.3775rem;
+      background: #ffce2f;
+      text-align: center;
+      border-radius: 2rem;
+      padding: 0 1.69rem 1.01rem 1.69rem;
+      margin-bottom: 2.44rem;
+    }
+
+    .project-text-lever {
+      margin-top: 1.31rem;
+    }
+
+    .advantage-list img {
+      margin-top: 2.25rem;
+      margin-bottom: 1.31rem;
+      width: 7.25rem;
+      height: 6.81rem;
+    }
+
+    .advantage-list .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .advantage-list .sub-title {
+      font-size: 1.125rem;
+      font-weight: 450;
+    }
+
+    .step {
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+
+    .step>div {
+      align-items: center !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .step .sub-title {
+      font-size: 0.875rem;
+      font-weight: 450;
+    }
+
+    .step .circle {
+      position: relative;
+      width: 8.88rem;
+      height: 8.88rem;
+      border-radius: 50%;
+      background: #ffce2f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    /* .step > div {
+
+      border: 1px solid #ccc;
+    } */
+    .step .arrow {
+      position: relative;
+      width: 1.44rem;
+      height: 1.44rem;
+      margin-top: -6.25rem;
+    }
+
+    .step .arrow::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      /* right: -100%; */
+      transform: translate(30%, -50%);
+      border: 1.44rem solid transparent;
+      border-left: 1.44rem solid #ffce2f;
+    }
+
+    .lg-btn {
+      background: #C93A38;
+      /* margin: 0 8.13rem; */
+      border-radius: 2rem;
+      height: 4.5rem;
+      font-size: 2.25rem;
+      text-align: center;
+      color: #fff;
+      margin-top: 6.19rem;
+
+      margin-bottom: 6.16rem;
+    }
+
+
+    /* .step > div:not(:last-of-type) .circle::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -100%;
+      transform: translateY(-50%);
+      border: 1.44rem solid transparent;
+      border-left: 1.44rem solid #ffce2f;
+    } */
+    .proud-pepper {
+      display: flex;
+      /* align-items: center; */
+    }
+
+    .proud-pepper>img {
+      width: 50%;
+      margin-right: 1.75rem;
+    }
+
+    .proud-pepper>div {
+      background: #ffce2f;
+      width: 50%;
+      padding-top: 3.5rem;
+    }
+
+    .proud-pepper .t1 {
+      font-size: 1rem;
+      font-weight: bold;
+      border-bottom: 1px solid rgb(168, 139, 58);
+      margin-bottom: 0.88rem;
+      padding-left: 1rem;
+    }
+
+    .proud-pepper .t2 {
+      font-size: 1.875rem;
+      font-weight: bold;
+      padding-left: 1rem;
+    }
+
+    .proud-pepper .t3 {
+      font-size: 1.875rem;
+      font-weight: bold;
+      padding-left: 1rem;
+    }
+
+    .selling-advantage {
+      display: flex;
+      margin: 0 4.04rem;
+    }
+
+    .selling-advantage img.pc {
+      width: 70%;
+    }
+
+    .selling-advantage img.mobile {
+      margin-bottom: 5rem;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .advantage-report .ph {
+      font-size: 2.4rem;
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+    }
+
+    .advantage-report .source {
+      font-size: 1.32rem;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+    }
+
+    .report {
+      text-align: center;
+    }
+
+    .project-text-reviews {
+      text-align: center;
+      margin: 3.75rem 2.38rem 2.06rem 2.38rem;
+    }
+
+    .project-text-brand {
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: center;
+      padding: 3.75rem 2.38rem 2.06rem 2.38rem;
+      background: #ffce2f;
+    }
+
+    .project-text-brand .img {
+      width: 100%;
+    }
+
+    .project-text-brand .text-img {
+      width: 30%;
+      margin: 2.5rem 0;
+    }
+
+    .reviews {
+      margin-right: 2.38rem;
+      text-align: right;
+    }
+
+    .reviews .bold {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .mobile_5 {
+      background: #ffce2f;
+    }
+
+    .production {
+      display: flex;
+      margin: 0 2.38rem;
+    }
+
+    .production-list {
+      margin-top: 7.06rem;
+    }
+
+    .production-list>div {
+      margin-top: 2.44rem;
+    }
+
+    .production-list .describe {
+      background: #ffce2f;
+      padding: 1.88rem 3.3rem;
+      text-align: center;
+    }
+
+    .production-list .describe .tt1 {
+      font-size: 3rem;
+    }
+
+    .production-list .describe .tt2 {
+      font-size: 2.25rem;
+      font-weight: bold;
+      background: #fff;
+      padding: 0.5rem 4rem;
+      display: inline-block;
+      border-radius: 3rem;
+    }
+
+    .production .bkjp {
+      width: 50%;
+    }
+
+    .production>div:last-of-type img {
+      margin-top: 4.06rem;
+    }
+
+    .team-list {
+      display: flex;
+      margin: 0 2rem;
+    }
+
+    .team-list>div {
+      width: 32%;
+      position: relative;
+    }
+
+    .team-list>div>div {
+      position: absolute;
+      display: flex;
+      top: 35%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      padding: 0 5px;
+    }
+
+    .team-list>div>div p:first-of-type {
+      font-weight: bold;
+    }
+
+    .team-list>div:not(:last-of-type) {
+      margin-right: 1%;
+    }
+
+    .policys {
+      flex-direction: column;
+    }
+
+    .policys>div {
+      width: 37rem;
+    }
+
+    .policys .title {
+      background: #ffce2f;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: 500;
+    }
+
+    .policys .item {
+      display: flex;
+      margin-top: 2.94rem;
+      font-weight: 500;
+
+    }
+
+    .policys .item>div:first-of-type {
+      position: relative;
+      margin-right: 30px;
+    }
+
+    .policys .item>div:last-of-type {
+      border-bottom: 1px dashed #ccc;
+      width: 100%;
+    }
+
+    .policys .item>div:first-of-type::after {
+      content: ' ';
+      position: absolute;
+      width: 10px;
+      height: 2.75rem;
+      background: #ffce2f;
+      right: -20px;
+    }
+
+    .policys .item>div img {
+      width: 2.88rem;
+    }
+
+    .policys .desc {
+      margin-top: 2.94rem;
+      margin-left: calc(2.75rem + 30px);
+      position: relative;
+      font-weight: 500;
+
+    }
+
+    .policys .desc::after {
+      content: ' ';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ffce2f;
+      left: -23px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .design {
+      margin: 0 2.38rem;
+      display: flex;
+    }
+
+    .design>div {
+      width: 48%;
+    }
+
+    .design>div:nth-of-type(odd) {
+      margin-right: 2%;
+    }
+
+    .design>div>div {
+      background: #ffce2f;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .design>div>div .dd1 {
+      color: rgb(106, 88, 34);
+      font-weight: 500;
+      line-height: 1.7rem;
+      margin-bottom: 0 !important;
+    }
+
+    .design>div>div .dd2 {
+      font-weight: bold;
+      line-height: 1.25rem;
+      margin-top: 1rem !important;
+      margin-bottom: 0px !important;
+    }
+
+    .cooperation {
+      display: flex;
+      flex-direction: column;
+      padding: 0 2rem;
+      background: #ffce2f;
+      margin-top: 5.6rem;
+      padding-bottom: 5.6rem;
+    }
+
+    .cooperation .row>div {
+      padding-bottom: 4.5rem;
+      border-radius: 2rem;
+    }
+
+    .cooperation .row>div>div {
+      background: #fff;
+      border-radius: 2rem;
+      text-align: center;
+      height: calc(150px + 1.75rem);
+      padding: 1.75rem 0;
+    }
+
+    .cooperation .row>div>div .cc1 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 8px 0 !important;
+    }
+
+    .cooperation .row>div>div .cc2 {
+      color: rgb(135, 135, 135);
+
+      font-size: 14px;
+    }
+
+    .cooperation .row>div img {
+      width: 3.88rem;
+    }
+
+    footer {
+      background: #ffce2f;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer>div {
+      display: flex;
+      justify-content: center;
+    }
+
+    footer>div .logo {
+      width: 100px;
+    }
+
+    footer>div>div {
+      margin-right: 2rem;
+    }
+
+    footer>div>div p {
+      text-align: left;
+      margin-bottom: 5px !important;
+    }
+
+    footer>div>div p:first-of-type {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border-bottom: .1875rem solid #fff;
+    }
+
+    footer:last-of-type {
+      padding: 5px;
+      border-top: 1px solid #fff;
+    }
+
+    @media (min-width: 768px) {
+
+      .project-advantage img,
+      .project-text-lever img,
+      .project-text-reviews img {
+        width: 33rem;
+        height: 5.5rem;
       }
-    </style>
+
+      .advantage-list .advantage {
+        height: 19.00375rem;
+        margin-bottom: 0;
+      }
+
+      .project-text-lever {
+        margin-top: 3.75rem;
+      }
+
+      .lg-btn {
+        display: inline-block;
+        padding: 0 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .proud-pepper>img {
+        width: 60%;
+      }
+
+      .advantage-report {
+        align-items: start;
+        margin-left: -40px;
+      }
+
+      .advantage-report img {
+        width: 60%;
+      }
+
+      .report {
+        margin-left: 40px;
+        text-align: left;
+      }
+
+      .step {
+        padding: 0;
+      }
+
+      .production,
+      .design {
+        margin: 0 15%;
+      }
+
+      .production .bkjp {
+        width: 100%;
+      }
+
+      .production>div:last-of-type img {
+        margin-top: 0;
+      }
+
+      .production-list .describe {
+        padding: 10px 0;
+      }
+
+      .production-list .describe .tt1 {
+        font-size: 1rem;
+        /* margin-bottom: 0 !important; */
+      }
+
+      .production-list .describe .tt2 {
+        font-size: .875rem;
+        padding: 5px 0;
+        width: 140px;
+        text-align: center;
+        margin-bottom: 0 !important;
+      }
+
+      .team-list {
+        margin: 0 12%;
+      }
+
+      .team-list>div>div {
+        top: 10%;
+        padding: 0 20px;
+      }
+
+      .policys {
+        font-size: 24px;
+      }
+
+      .design>div>div {
+        padding: 10px 0;
+      }
+
+      .design>div>div .dd1 {
+        line-height: 20px;
+        margin-bottom: 0 !important;
+      }
+
+      .design>div>div .dd2 {
+        line-height: 20px;
+        margin-top: 5px !important;
+      }
+
+      .cooperation {
+        padding: 0 12%;
+      }
+
+      .cooperation .row>div>div {
+        height: calc(170px + 1.75rem);
+      }
+
+      footer>div>div p:first-of-type {
+        font-size: 18px;
+        border-bottom: 5px solid #fff;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_01.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_02.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_03.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_04.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_05.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_07.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_08.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_09.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_10.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_11.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_13.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_14.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_16.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_17.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_18.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_19.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_20.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_21.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_22.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_23.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_24.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_25.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_26.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_27.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_28.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_29.jpg" width="1000" height="500">
-  <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/imgs/_30.jpg" width="1000" height="500">
+  <header>
+    <img class="home" src="./assets/images/home.png" />
+    <img class="logo" src="./assets/images/logo.png" />
+    <img class="message" src="./assets/images/message.png" />
+  </header>
+  <img class="lazyload d-block d-sm-none" src="./assets/imgs/default.png" data-src="./assets/images/1.png" width="10000"
+    height="500">
+  <img class="lazyload d-none d-sm-block" src="./assets/imgs/default.png" data-src="./assets/images/1_pc.png"
+    width="10000" height="500">
+  <div class="project-advantage">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/project-advantage.png" width="10000"
+      height="500">
+  </div>
+  <div class="advantage-list row">
+    <div class="col-md-3 col-sm-6 col-6">
+      <div class="advantage">
+        <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/good-product.png" width="10000"
+          height="500">
+        <p class="title">好产品</p>
+        <p class="sub-title">畅销新疆40年，才进入全国市场，稀缺性产品抢占市场红利</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-6">
+      <div class="advantage">
+        <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/high-sales.png" width="10000"
+          height="500">
+        <p class="title">高销量</p>
+        <p class="sub-title">创始团队来自阿里腾讯，专业操盘流量，大流量才能有大销量</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-6">
+      <div class="advantage">
+        <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/lever.png" width="10000"
+          height="500">
+        <p class="title">投资小回本快</p>
+        <p class="sub-title">投资小回本快，最快回本周期三个月</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-6">
+      <div class="advantage">
+        <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/persistence.png" width="10000"
+          height="500">
+        <p class="title">可持续</p>
+        <p class="sub-title">餐品研发团队20年经验，保证定期研发爆款</p>
+      </div>
+    </div>
+  </div>
+  <div class="project-text-lever">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-lever.png" width="10000"
+      height="500">
+  </div>
+  <div class="container">
+    <div class="row step">
+      <div>
+        <div class="circle">1</div>
+        <p class="title">小成本投入</p>
+        <p class="sub-title">最快三个月回本</p>
+      </div>
+      <div class="arrow"></div>
+      <div>
+        <div class="circle">2</div>
+        <p class="title">0经验无需大厨</p>
+        <p class="sub-title">一站式培训快速开店经营</p>
+      </div>
+      <div class="arrow"></div>
+      <div>
+        <div class="circle">3</div>
+        <p class="title">线上平台全托管</p>
+        <p class="sub-title">持续稳定高单量</p>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <button type="button" class="btn btn-danger lg-btn">
+      联系经营顾问一对一解答
+    </button>
+  </div>
+  <div class="proud-pepper">
+    <img class="lazyload d-block d-sm-none" src="./assets/imgs/default.png" data-src="./assets/images/2.png"
+      width="10000" height="500">
+    <img class="lazyload d-none d-sm-block" src="./assets/imgs/default.png" data-src="./assets/images/2_pc.png"
+      width="10000" height="500">
+    <div>
+      <p class="t1">XINJIANG FRIED NOODLES WITH VERY PROUD PEPPER</p>
+      <div>
+        <p class="t2">A PROUD PEPPRT</p>
+        <p class="t3">挺傲椒新疆炒米粉</p>
+      </div>
+    </div>
+  </div>
+  <div class="project-text-lever">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-advantage.png" width="10000"
+      height="500">
+  </div>
+  <div class="selling-advantage row">
+    <div class="col-md-7 col-sm-12 col-12 center">
+      <img class="lazyload d-block d-sm-none img mobile" src="./assets/imgs/default.png"
+        data-src="./assets/images/3.png" width="10000" height="500">
+      <img class="lazyload d-none d-sm-block img pc" src="./assets/imgs/default.png" data-src="./assets/images/3_pc.png"
+        width="10000" height="500">
+    </div>
+    <div class="col-md-5 col-sm-12 col-12 center flex-column advantage-report">
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/report.png" width="10000"
+        height="500">
+    </div>
+  </div>
+  <div class="project-text-reviews">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-return.png" width="10000"
+      height="500">
+  </div>
+  <div class="reviews d-block d-sm-none">
+    <p class="bold">RAVE REVIEWS</p>
+    <p class="bold">好评如潮</p>
+    <p>月销万单，纯利3W</p>
+    <p>一致获得客户的肯定评价</p>
+  </div>
+  <img class="lazyload d-block d-sm-none" src="./assets/imgs/default.png" data-src="./assets/images/4.png" width="10000"
+    height="500">
+  <img class="lazyload d-none d-sm-block" src="./assets/imgs/default.png" data-src="./assets/images/4_pc.png"
+    width="10000" height="500">
+  <div class=" d-block d-sm-none">
+
+    <div class="project-text-brand">
+      <img class="lazyload d-block d-sm-none" src="./assets/imgs/default.png" data-src="./assets/images/text-brand.png"
+        width="10000" height="500">
+      <img class="lazyload d-block d-sm-none text-img" src="./assets/imgs/default.png"
+        data-src="./assets/images/5_1.png" width="10000" height="500">
+    </div>
+  </div>
+  <div class="mobile_5">
+    <img class="lazyload d-block d-sm-none" src="./assets/imgs/default.png" data-src="./assets/images/5.png"
+      width="10000" height="500">
+    <img class="lazyload d-none d-sm-block" src="./assets/imgs/default.png" data-src="./assets/images/5_pc.png"
+      width="10000" height="500">
+  </div>
+  <div class="project-text-reviews">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-production.png" width="10000"
+      height="500">
+  </div>
+  <div class="production row">
+    <div class="col-md-4 col-sm-12 col-12">
+      <img class="lazyload bkjp" src="./assets/imgs/default.png" data-src="./assets/images/hot.png" width="10000"
+        height="500">
+    </div>
+    <div class="col-md-8 col-sm-12 col-12">
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/6.png" width="10000" height="500">
+    </div>
+  </div>
+  <div class="production production-list row">
+    <div class="col-md-4">
+      <img class="lazyload larg-img" src="./assets/imgs/default.png" data-src="./assets/images/p1.png" width="10000"
+        height="500">
+      <div class="describe">
+        <p class="tt1">鲜辣开胃大盘鸡</p>
+        <p class="tt2">大盘鸡拌米粉</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img class="lazyload larg-img" src="./assets/imgs/default.png" data-src="./assets/images/p2.png" width="10000"
+        height="500">
+      <div class="describe">
+        <p class="tt1">创新炒年糕</p>
+        <p class="tt2">鸡肉炒年糕</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img class="lazyload larg-img" src="./assets/imgs/default.png" data-src="./assets/images/p3.png" width="10000"
+        height="500">
+      <div class="describe">
+        <p class="tt1">可以喝汤的凉皮</p>
+        <p class="tt2">清爽凉皮</p>
+      </div>
+    </div>
+  </div>
+  <div class="project-text-reviews">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-team.png" width="10000"
+      height="500">
+  </div>
+  <div class="team-list">
+    <div>
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/t1.png" width="10000"
+        height="500">
+      <div>
+        <p>专业的研发团队</p>
+        <p>好团队保证好的产品，大销量和可持续发展</p>
+      </div>
+    </div>
+    <div>
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/t2.png" width="10000"
+        height="500">
+      <div>
+        <p>专业团队扶持</p>
+        <p>菜品研发团队人均有着20年行业经验，经手研发菜品达上千种</p>
+      </div>
+    </div>
+    <div>
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/t3.png" width="10000"
+        height="500">
+      <div>
+        <p>强大的运营团队</p>
+        <p>运营团队均来自阿里，腾讯，擅长全网线上运营，保证可持续大销量</p>
+      </div>
+    </div>
+  </div>
+  <div class="project-text-reviews">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-investment.png" width="10000"
+      height="500">
+  </div>
+  <div class="policys center">
+    <div>
+      <div class="title">单店合作政策</div>
+      <div class="item">
+        <div>
+          <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/ip2.png" width="10000"
+            height="500">
+        </div>
+        <div>
+          <p>合作费：49800</p>
+          <p>每个城市前30名立减10000，先到先得</p>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+          <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/ip2.png" width="10000"
+            height="500">
+        </div>
+        <div>
+          <p>品牌保证金：10000</p>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+          <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/ip3.png" width="10000"
+            height="500">
+        </div>
+        <div>
+          <p>设备：20000</p>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+          <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/ip4.png" width="10000"
+            height="500">
+        </div>
+        <div>
+          <p>总计：79800</p>
+        </div>
+      </div>
+      <div class="desc">
+        每月纯利润约3W+，最快3个月回本
+      </div>
+    </div>
+  </div>
+  <div class="project-text-reviews">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-design.png" width="10000"
+      height="500">
+  </div>
+  <div class="design">
+    <div>
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/d1.png" width="10000"
+        height="500">
+      <div>
+        <p class="dd1">CHOPSTICKS</p>
+        <p class="dd1">SETS</p>
+        <p class="dd2">筷子套</p>
+      </div>
+    </div>
+    <div>
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/d2.png" width="10000"
+        height="500">
+      <div>
+        <p class="dd1">TAKE-OUT</p>
+        <p class="dd1">BAGS</p>
+        <p class="dd2">外卖袋</p>
+      </div>
+    </div>
+  </div>
+  <div class="design">
+    <div>
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/d3.png" width="10000"
+        height="500">
+      <div>
+        <p class="dd1">PAPER</p>
+        <p class="dd1">TAKEAWAY BAG</p>
+        <p class="dd2">纸质外卖袋</p>
+      </div>
+    </div>
+    <div>
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/d4.png" width="10000"
+        height="500">
+      <div>
+        <p class="dd1">WAIWAN</p>
+        <p class="dd1">TO SIGN</p>
+        <p class="dd2">台签</p>
+      </div>
+    </div>
+  </div>
+  <div class="cooperation">
+    <div class="project-text-reviews">
+      <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-cooperation.png"
+        width="10000" height="500">
+    </div>
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-4 col-sm-6 col-6">
+          <div class="mr-10">
+            <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/c1.png" width="10000"
+              height="500">
+            <p class="cc1">大数据选址</p>
+            <p class="cc2">百万条数据反复验证选一家店址</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6">
+          <div class="mr-10">
+            <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/c2.png" width="10000"
+              height="500">
+            <p class="cc1">全套培训</p>
+            <p class="cc2">一站式培训从“0”开始，包教包会</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6">
+          <div class="mr-10">
+            <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/c3.png" width="10000"
+              height="500">
+            <p class="cc1">项目落地</p>
+            <p class="cc2">专业团队负责店面前后端设计落地</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6">
+          <div class="mr-10">
+            <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/c4.png" width="10000"
+              height="500">
+            <p class="cc1">平台托管</p>
+            <p class="cc2">线上外卖平台专业运营，无需操心即可保证持续高单量</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6">
+          <div class="mr-10">
+            <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/c5.png" width="10000"
+              height="500">
+            <p class="cc1">流量扶持</p>
+            <p class="cc2">抖音+社群私域流量专业运营扶持</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6">
+          <div class="mr-10">
+            <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/c6.png" width="10000"
+              height="500">
+            <p class="cc1">持续盈利能力</p>
+            <p class="cc2">持续稳定的新品迭代+专业的运营管理=品牌的超长生命力</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-text-reviews">
+    <img class="lazyload" src="./assets/imgs/default.png" data-src="./assets/images/text-join.png" width="10000"
+      height="500">
+  </div>
+  <div class="production row">
+    <img class="lazyload d-block d-sm-none" src="./assets/imgs/default.png" data-src="./assets/images/7.png"
+      width="10000" height="500">
+    <img class="lazyload d-none d-sm-block" src="./assets/imgs/default.png" data-src="./assets/images/7_pc.png"
+      width="10000" height="500">
+  </div>
+  <div class="center">
+
+    <button type="button" class="btn btn-danger lg-btn" style="background: rgb(237, 97, 43);">
+      <img class="lazyload" style="width: 1.875rem; vertical-align: baseline;" src="./assets/imgs/default.png" data-src="./assets/images/m.png"
+      width="10000" height="500">
+      提交联系方式，免费获取经营秘籍
+    </button>
+  </div>
+  <style>
+  </style>
+  <footer>
+    <div>
+      <div>
+        <img class="lazyload logo" src="./assets/imgs/default.png" data-src="./assets/images/logo.png" width="10000"
+          height="500">
+      </div>
+      <div>
+        <p>首页</p>
+        <p>品牌资料</p>
+      </div>
+      <div>
+        <p>新闻</p>
+        <p>站外新闻</p>
+        <p>站内新闻</p>
+      </div>
+      <div>
+        <p>联系我们</p>
+        <p>联系方式</p>
+        <p>地址</p>
+        <p>400热线</p>
+      </div>
+    </div>
+  </footer>
+  <footer>
+    The brand TING AO JIAO has the final right interpretation
+  </footer>
 </body>
+
 </html>
